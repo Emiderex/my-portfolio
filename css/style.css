@@ -83,8 +83,6 @@ nav ul li a:hover::after{
     cursor: pointer;
 }
 .btn:hover {
-    background-color:  white;
-    color: #FF6600;
     transform: scale(1.1); 
 }
 
@@ -122,7 +120,7 @@ h4 {
 
 .newsletter form input:first-child {
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
     padding: 7px 15px 10px;
     border: 2px solid #FF6600;
     outline: none;
@@ -249,6 +247,14 @@ h4 {
 /* Services */
 .services {
     padding: 50px 0;
+    background-image: url(../Image/services.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+    background-position-x: right;
+
 }
 
 .list{
@@ -300,7 +306,7 @@ h4 {
 
 /*--------portfolio--------*/
 .portfolio {
-    padding: 50px 0px;
+    padding: 50px 0;
 }
 
 .work-box {
@@ -455,10 +461,63 @@ h4 {
     color:#fff;
 }
 
+nav .fas {
+    display: none;
+}
 
 /*--------------Media Query--------------*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 950px) {
     .header {
         background-image: url(../Image/Artboard\ 1\ copy\ 2-100.jpg);
     }
+
+    .content{
+        /* margin-top: 100%; */
+        font-size: 16px;
+    }
+
+    .content h3{
+        color: rgb(0, 0, 0);
+    }
+
+    nav .fas {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav .btn-center{
+        position: absolute;
+        left: 200px;
+        padding: 10px 30px;
+        z-index: 2;
+    }
+
+    nav ul{
+        background: #FF6600;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a {
+        color: white;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    /* .newsletter input {
+        
+    } */
 }
